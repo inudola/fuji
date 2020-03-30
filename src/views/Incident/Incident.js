@@ -437,7 +437,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Lifecycle</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Lifecycle" />
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                         {/* <FormText color="muted">This is a help text</FormText>*/}
                                       </Col>
                                     </FormGroup>
@@ -450,8 +455,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Category</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Categry" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -461,8 +470,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Status</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Status" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -474,8 +487,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Impact <Badge style={{color:'red'}}> *</Badge></Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Impact" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -485,8 +502,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Reporting Media</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Reporting Media" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -498,8 +519,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Urgency <Badge style={{color:'red'}}> *</Badge></Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Urgency" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -509,8 +534,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Product Catalog</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="ProductCatalog" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -522,8 +551,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Priority</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Priority" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -533,8 +566,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Config Item</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Config Item" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -546,8 +583,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Created</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Created" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -557,8 +598,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">By</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="By" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -570,8 +615,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">Updated</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="Updated" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
@@ -581,8 +630,12 @@ class Incident extends Component {
                                         <Label htmlFor="text-input">By</Label>
                                       </Col>
                                       <Col xs="12" md="9">
-                                        <Input type="text" id="text-input" name="text-input" placeholder="By" />
-                                        {/* <FormText color="muted">This is a help text</FormText>*/}
+                                      <Input type="select" name="select" id="select">
+                                      <option value="0">Please select</option>
+                                      <option value="1">Option #1</option>
+                                      <option value="2">Option #2</option>
+                                      <option value="3">Option #3</option>
+                                    </Input>
                                       </Col>
                                     </FormGroup>
                                   </Col>
