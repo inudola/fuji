@@ -25,6 +25,14 @@ export default {
         variant: 'info',
         text: '',
       },
+    },{
+      name: 'User Management',
+      url: '/usermanagement',
+      icon: 'icon-user',
+      badge: {
+        variant: 'info',
+        text: '',
+      },
     }
   ]
 };
