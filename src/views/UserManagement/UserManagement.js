@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component, Fragment} from 'react';
 import {
   Badge,
   Button,
@@ -9,12 +9,80 @@ import {
   Form,
   FormFeedback,
   FormGroup,
+  NavLink,
   Input,
   Label,
   Row
 } from 'reactstrap';
 
+import {BootstrapTable, TableHeaderColumn} from 'react-bootstrap-table';
+import 'react-bootstrap-table/dist//react-bootstrap-table-all.min.css';
+import data from './_data';
+const selectRowProp = {
+  mode: 'checkbox'
+};
+const options = {
+  insertText: 'Tambah',
+  deleteText: 'Hapus',
+  saveText: 'my_save',
+  closeText: 'my_close'
+};
 class UserManagement extends Component {
+  constructor(props) {
+    super(props);
+
+    this.table = data.rows;
+    this.options = {
+      sortIndicator: true,
+      hideSizePerPage: true,
+      paginationSize: 3,
+      hidePageListOnlyOnePage: true,
+      clearSearch: true,
+      alwaysShowAllBtns: false,
+      withFirstAndLast: false
+    }
+
+  }
+
+  // just an example
+  nameFormat(cell, row) {
+    const id = `/users/${row.id}`
+      return (
+      <NavLink strict to={id}> {cell} </NavLink>
+    );
+  };
+
+  onClickProductSelected(cell, row, rowIndex){
+    console.log('User #', rowIndex);
+   }
+   hapusData(rowIndex){
+    console.log("hapus", rowIndex);
+   }
+   editData(rowIndex){
+    console.log("EditData", rowIndex);
+   }
+ 
+ 
+  cellButton(cell, row, enumObject, rowIndex) {
+    return (
+       <Button color="primary"
+          type="button" 
+          onClick={() => 
+          this.onClickProductSelected(cell, row, rowIndex)}
+       >
+       Hapus</Button>
+    )
+ }
+ editButton(cell, row, enumObject, rowIndex) {
+  return (
+     <Fragment>
+       <Button type="button" color="primary" onClick={() => this.editData(rowIndex)}> Edit</Button> 
+       &nbsp;
+       <Button type="button" color="danger" onClick={() => this.hapusData(rowIndex)}> Hapus</Button>
+     </Fragment>
+  )
+}
+
   render() {
     return (
       <div className="animated fadeIn">
@@ -26,108 +94,15 @@ class UserManagement extends Component {
                 User Management
               </CardHeader>
               <CardBody>
-                <Form action="" method="post" encType="multipart/form-data" className="form-horizontal">
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">Category <Badge style={{color:'red'}}> *</Badge></Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                      <Input type="select" name="select" id="select">
-                        <option value="0">Please select</option>
-                        <option value="1">Option #1</option>
-                        <option value="2">Option #2</option>
-                        <option value="3">Option #3</option>
-                      </Input>
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">Notify Originator</Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                      <Input type="select" name="select" id="select">
-                        <option value="0">Please select</option>
-                        <option value="1">Option #1</option>
-                        <option value="2">Option #2</option>
-                        <option value="3">Option #3</option>
-                      </Input>
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">Summary <Badge style={{color:'red'}}> *</Badge></Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                      <Input type="text" id="text-input" name="text-input" placeholder="Summary" />
-                      {/*<FormText color="muted">This is a help text</FormText>*/}
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">Article</Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                      <Input type="select" name="select" id="select">
-                        <option value="0">Please select</option>
-                        <option value="1">Option #1</option>
-                        <option value="2">Option #2</option>
-                        <option value="3">Option #3</option>
-                      </Input>
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">Attachment</Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                      <Input type="file" id="file-input" name="file-input" />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">Details</Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                      <Input type="textarea" name="textarea-input" id="textarea-input" rows="9"
-                             placeholder="Write something here..." />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">Resolved</Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                        <Input type="text" id="disabled-input" name="disabled-input" placeholder="22 March 2020: 12:10:22" disabled />
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select">By</Label>
-                    </Col>
-                    <Col xs="12" md="4">
-                      <Input type="select" name="select" id="select">
-                        <option value="0">Please select</option>
-                        <option value="1">Option #1</option>
-                        <option value="2">Option #2</option>
-                        <option value="3">Option #3</option>
-                      </Input>
-                    </Col>
-                  </FormGroup>
-                  <FormGroup row>
-                    <Col md="2">
-                      <Label htmlFor="select"></Label>
-                    </Col>
-                    <Col xs="2">
-
-                    </Col>
-                    <Col  xs="12" md="4" style={{textAlign:'right'}}>
-                      <Button style={{marginRight:'10px'}} type="reset" size="sm" color="secondary"><i className="fa fa-ban"></i> Cancel</Button>
-
-                      <Button type="submit" size="sm" color="success"><i className="fa fa-dot-circle-o"></i> Save</Button>
-                    </Col>
-                  </FormGroup>
-                </Form>
-              </CardBody>
+            <BootstrapTable deleteRow={ true } selectRow={ selectRowProp } insertRow={ true } data={this.table} version="4" striped hover pagination search options={options}>
+              <TableHeaderColumn dataField="name" dataSort dataFormat={this.nameFormat} >Name</TableHeaderColumn>
+              <TableHeaderColumn isKey dataField="email">Email</TableHeaderColumn>
+              <TableHeaderColumn dataField="regDate" dataSort>Reg Date</TableHeaderColumn>
+              <TableHeaderColumn dataField="city" dataSort>City</TableHeaderColumn>
+              <TableHeaderColumn tdStyle={{textAlign:'center'}} dataField='button'dataFormat={this.editButton.bind(this)}
+      />
+            </BootstrapTable>
+          </CardBody>
             </Card>
           </Col>
         </Row>
